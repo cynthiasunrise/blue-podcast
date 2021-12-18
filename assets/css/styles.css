@@ -1,0 +1,648 @@
+/* ############################ GOOGLE FONTS ############################ */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600&display=swap');
+
+/* ############################ VARIABLES ############################ */
+:root {
+  --color-azul-marino: #0000EC;
+  --color-verde: #00F3BB;
+  --color-azul-oscuro: #060A24;
+  --color-blanco: #FFF;
+  --font-size-titulo: 2.25rem;          /* 36px */
+  --font-size-subtitulo: 1.5rem;        /* 24px */
+  --font-size-texto-item: 1rem;         /* 16px */    /* para items de menu y botones*/
+  --font-size-texto-normal: .875rem;    /* 14px */
+  --alto-header: 3rem;
+}
+
+/* ############################ RESET ############################# */
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+/* ############################ GENERAL ############################# */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: var(--font-size-texto-normal);
+  font-weight: 400;
+  color: var(--color-azul-oscuro);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.no-scrolling {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.texto-titulo {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: var(--font-size-titulo);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.texto-subtitulo {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: var(--font-size-subtitulo);
+  font-weight: 600;
+  text-align: center;
+}
+
+.texto-btn {
+  font-size: var(--font-size-texto-item);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.texto-tachado {
+  text-decoration: line-through;
+}
+
+.texto-blanco {
+  color: var(--color-blanco);
+}
+
+.texto-azulito {
+  color: var(--color-azul-marino);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: #00F3BB;
+  color: var(--color-azul-oscuro);
+  width: 100%;
+  padding: .8em 0;
+  display: inline-block;
+  text-align: center;
+  transition: .3s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  color: var(--color-blanco);
+}
+
+.container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ############################ ESTILOS POR SECCIONES ############################ */
+
+/* ********************SECCIÓN HEADER********************* */
+.header {
+  background-color: var(--color-blanco);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  height: var(--alto-header);
+  width: 100%;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 2em;
+  vertical-align: middle;
+}
+
+.nav__menu {
+  position: absolute;
+  top: var(--alto-header);
+  right: -100%;
+  background-color: var(--color-azul-marino);
+  width: 100%;
+  transition: transform 350ms ease-in-out;
+}
+
+.nav__item {
+  padding: 1em 0;
+}
+
+.nav__item:not(:last-child) {
+  border-bottom: .1px solid rgba(255, 255, 255, .5);
+}
+
+.nav__link {
+  color: var(--color-blanco);
+  text-transform: uppercase;
+  transition: .3s;
+  font-size: var(--font-size-texto-item);
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  color: var(--color-verde);
+  text-decoration: line-through;
+}
+
+.header__checkbox {
+  display: none;
+}
+
+.header__label {
+  vertical-align: middle;
+}
+
+.nav__toggle {
+  cursor: pointer;
+  background: var(--color-blanco);
+  padding: 1em .5em;
+  border: 0;
+  border-radius: .25em 0 0 .25em;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: 1.5em;
+  height: 3px;
+  background: var(--color-azul-marino); 
+
+  transition: transform 350ms ease-in-out, opacity 200ms linear;
+}
+
+.hamburger::before,
+.hamburger::after {
+  position: absolute;
+  content: '';
+  left: 0;
+}
+
+.hamburger::before {
+  bottom: 6px;
+}
+
+.hamburger::after {
+  top: 6px;
+}
+
+.header__checkbox:checked ~ .header__label .nav__toggle .hamburger {
+  transform: rotate(45deg);
+}
+
+.header__checkbox:checked ~ .header__label .nav__toggle .hamburger::before {
+  opacity: 0;
+}
+
+.header__checkbox:checked ~ .header__label .nav__toggle .hamburger::after {
+  transform: rotate(90deg) translate(-6px);
+}
+
+.header__checkbox:checked ~ .nav .nav__menu{
+  transform: translateX(-100%);
+}
+
+/* ********************SECCIÓN HERO********************* */
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero__titulo {
+  margin-top: 5rem;
+}
+
+.hero__slogan-desktop {
+  display: none;
+}
+
+.hero__slogan-mobile {
+  max-width: 55ch;
+}
+
+/* ********************SECCIÓN EPISODIOS********************* */
+.episodios {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  padding: calc(2rem + 10vw) 0 calc(6rem + 10vw);
+  -webkit-clip-path: polygon(0 10vw, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  clip-path: polygon(0 10vw, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  margin-bottom: calc(-20vw - 1.25rem);
+}
+
+.episodios__titulo {
+  margin-bottom: 2rem;
+}
+
+.episodios__podcasts > * + * {
+  margin-top: .6rem;
+}
+
+.episodios__iframe {
+  width: 100%;
+  height: 232px;
+}
+
+/* ********************SECCIÓN NOSOTROS********************* */
+.nosotros {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.nosotros__titulo {
+  margin-bottom: 2rem;
+}
+
+/* ********************SECCIÓN INVITADOS********************* */
+.invitados {
+  margin-bottom: 4rem;
+}
+
+.invitados__titulo {
+  margin-bottom: 2rem;
+}
+
+.invitados__gallery > * {
+  width: 100%;
+}
+
+/* ********************SECCIÓN TÓPICOS********************* */
+.topicos {
+  margin-bottom: 3rem;
+}
+
+.topicos__titulo {
+  margin-bottom: 2rem;
+}
+
+.topicos__card {
+  align-items: center;
+  line-height: 1.2;
+}
+
+.topicos__cards > * + * {
+  margin-top: 3rem;
+}
+
+.topicos__img {
+  max-width: 104px;
+  margin-bottom: .5rem;
+}
+
+/* ********************SECCIÓN NOVEDADES********************* */
+.novedades {
+  background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+  padding: 6em 0 5em;
+  -webkit-clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 100%);
+  text-align: center;
+}
+
+.novedades__titulo {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ********************SECCIÓN FOOTER********************* */
+.footer {
+  padding: 1em 0 3em;
+}
+
+.footer__container {
+  text-align: center;
+}
+
+.footer__copyright {
+  margin-bottom: 1.5rem;
+}
+
+.footer__social-icon {
+  width: 100%;
+  font-size: 1rem;
+  color: var(--color-azul-oscuro);
+  transition: .3s;
+}
+
+.footer__social-icon:hover,
+.footer__social-icon:focus {
+  transform: scale(1.2);
+  color: var(--color-azul-marino);
+}
+
+/* ############################ MEDIA QUERIES ############################ */
+/*  500px
+    560px
+    750px
+    768px
+    1024px
+*/
+
+/* *****************************500px******************************* */
+@media screen and (min-width: 500px) {
+  /* ----------- Sección HERO ----------- */
+
+  .hero__titulo {
+    margin-top: 7rem;
+  }
+
+  .btn {
+    width: auto;
+    padding: .8em 4em;
+  }
+
+  /* ----------- Sección EPISODIOS ----------- */
+
+  .episodios {
+    margin-bottom: calc(-17vw - 1.25rem);
+  }
+
+  /* ----------- Sección NOSOTROS ----------- */
+
+  .nosotros__img {
+    width: 60vw;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* ----------- Sección INVITADOS ----------- */
+  .invitados__gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .invitados__gallery > * {
+    width: 50%;
+  }
+
+  /* ----------- Sección NOVEDADES ----------- */
+
+  .novedades__titulo {
+    margin-top: 5rem;
+  }
+}
+
+/* *****************************560px******************************* */
+@media screen and (min-width: 560px) {
+
+  /* ----------- Sección EPISODIOS ----------- */
+  .episodios__podcasts {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .episodios__iframe {
+    margin-top: 0;
+    width: 48.5%;
+  }
+  
+  .episodios__iframe:nth-child(even) {
+    margin-left: 3%;
+  }
+  
+  .episodios__iframe:nth-child(3),
+  .episodios__iframe:nth-child(4) {
+    margin-top: .6rem;
+  }
+}
+
+/* *****************************750px******************************* */
+@media screen and (min-width: 750px) {
+  /* ----------- Sección INVITADOS ----------- */
+  .invitados__gallery > * {
+    width: 33.33%;
+  }
+}
+
+/* *****************************768px******************************* */
+@media screen and (min-width: 768px) {
+  :root {
+    --alto-header: 5rem;
+
+    --font-size-titulo: 3rem;               /* 48px-3rem        64px-4rem */
+    --font-size-subtitulo: 1.75rem;         /* 28px-1.75rem     24px-1.5rem */
+    --font-size-texto-item: 1rem;           /* 20px-1.25rem     18px-1.125rem*/
+    --font-size-texto-normal: 1.125rem;     /* 18px-1.125rem    16px-1rem */
+  }
+
+  .container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ----------- Sección HEADER ----------- */
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav__logo {
+    width: 2.5em;
+  }
+
+  .nav__menu {
+    position: relative;
+    top: unset;
+    right: 0;
+    background-color: initial;
+    transform: unset;
+    transition: unset;
+  }
+
+  .header__checkbox:checked ~ .nav .nav__menu {
+    transform: unset;
+    transition: unset;
+  }
+
+  .nav__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav__list > * {
+    margin: 0;
+  }
+
+  .nav__list > * + * {
+    margin-left: 3.5rem;
+  }
+
+  .nav__link {
+    color: var(--color-azul-oscuro);
+  }
+
+  .header__label {
+    display: none;
+  }
+
+  /* ----------- Sección HERO ----------- */
+
+  .hero__titulo {
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero__slogan-mobile {
+    display: none;
+  }
+  
+  .hero__slogan-desktop {
+    display: block;
+    max-width: 65ch;
+  }
+
+  /* ----------- Sección EPISODIOS ----------- */
+  .episodios {
+    margin-bottom: calc(-3vw - 9rem);
+  }
+
+  .episodios__iframe {
+    width: 47%;
+  }
+  
+  .episodios__iframe:nth-child(even) {
+    margin-left: 6%;
+  }
+  
+  .episodios__iframe:nth-child(3),
+  .episodios__iframe:nth-child(4) {
+    margin-top: 3rem;
+  }
+
+  .episodios__titulo {
+    margin-bottom: 3rem;
+  }
+
+  /* ----------- Sección NOSOTROS ----------- */
+
+  .nosotros__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nosotros__container > * {
+    width: 100%;
+  }
+
+  .nosotros__titulo {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .nosotros__texto {
+    padding: 3em 0;
+  }
+
+  /* ----------- Sección INVITADOS ----------- */
+
+  .invitados__titulo {
+    margin-bottom: 3rem;
+  }
+
+  /* ----------- Sección TÓPICOS ----------- */
+
+  .topicos__cards {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .topicos__cards > * {
+    margin: 0;
+    width: 100%;
+  }
+
+  .topicos__titulo {
+    margin-bottom: 3rem;
+  }
+
+  /* ----------- Sección NOVEDADES ----------- */
+
+  .novedades {
+    padding: 4em 0 7.5em;
+  }
+
+  .novedades__titulo {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  /* ----------- Sección FOOTER ----------- */
+
+  .footer {
+    padding: 2em 0 3em;
+  }
+
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__copyright {
+    margin: 0;
+  }
+
+  .footer__social-icons > * + * {
+    margin-left: 2rem;
+  }
+
+  .footer__social-icon {
+    font-size: 1.25rem;
+  }
+  
+}
+
+/* *****************************1024px******************************* */
+@media screen and (min-width: 1024px) {
+  :root {
+    --font-size-titulo: 3.5rem;
+    --font-size-texto-item: 1.125rem; 
+  }
+
+  /* ----------- Sección NOSOTROS ----------- */
+
+  .nosotros__img {
+    width: 500px;
+  }
+
+  /* ----------- Sección NOVEDADES ----------- */
+
+  .novedades__titulo {
+    margin-top: 10rem;
+  }
+}

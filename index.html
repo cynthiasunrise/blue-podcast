@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>PODCAST SPRINT PROJECT</title>
+</head>
+
+<body>
+  <div class="no-scrolling">
+    
+    <!-- SECCIÓN HEADER -->
+    <header class="header">
+      <div class="container">
+        <input type="checkbox" id="toggle-checkbox" class="header__checkbox" >
+        <nav class="nav flex-row">
+          <a href="#"><img class="nav__logo" src="./assets/img/logo.svg" alt="Logo"></a>
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#episodios" class="nav__link">Episodios</a></li>
+              <li class="nav__item"><a href="#nosotros" class="nav__link">Nosotros</a></li>
+              <li class="nav__item"><a href="#invitados" class="nav__link">Entrevistas</a></li>
+              <li class="nav__item"><a href="#topicos" class="nav__link">Tópicos</a></li>
+            </ul>
+          </div>
+        </nav>
+        <label class="header__label" for="toggle-checkbox">
+          <div class="nav__toggle">
+            <span class="hamburger"></span>
+          </div>
+        </label>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- SECCIÓN HERO -->
+      <section id="hero" class="hero">
+        <div class="container">
+          <h1 class="texto-titulo hero__titulo">Hello <span class="texto-tachado">world</span> pale blue dot<span class="texto-azulito">.</span></h1>
+          <p class="hero__slogan-desktop">El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
+          <p class="hero__slogan-mobile">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
+          <a class="btn texto-btn" href="#">Conocé más</a>
+        </div>
+      </section>
+
+      <!-- SECCIÓN EPISODIOS -->
+      <section id="episodios" class="episodios">
+        <div class="container">
+          <h2 class="texto-titulo texto-blanco episodios__titulo">Episodios</h2>
+          <div class="flex-column episodios__podcasts">
+            <iframe class="episodios__iframe" src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe class="episodios__iframe" src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe class="episodios__iframe" src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <iframe class="episodios__iframe" src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN NOSOTROS -->
+      <section id="nosotros" class="nosotros">
+        <div class="container nosotros__container">
+          <div class="nosotros__img-container">
+            <img class="nosotros__img" src="./assets/img/seccion_nosotros_img.png" alt="Imagen smartphone">
+          </div>
+          <div class="nosotros__texto">
+            <h2 class="texto-titulo nosotros__titulo">De dónde venimos</h2>
+            <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light.</p>
+            <p>Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN INVITADOS -->
+      <section id="invitados" class="invitados">
+        <div class="container">
+          <h2 class="texto-titulo invitados__titulo">Invitadas/os estelares</h2>
+        </div>
+        <div class="flex-column invitados__gallery">
+          <img src="./assets/img/seccion_invitados_1_grace-hopper.png" alt="Invitada 1 Grace Hopper">
+          <img src="./assets/img/seccion_invitados_2_Katie-Bouman.png" alt="Invitada 2 Katie Bouman">
+          <img src="./assets/img/seccion_invitados_3_Margaret_Hamilton.png" alt="Invitada 3 Margaret Hamilton">
+          <img src="./assets/img/seccion_invitados_4.png" alt="Invitada 4 Women">
+          <img src="./assets/img/seccion_invitados_5_eniac_operators.png" alt="Invitada 5 Eniac operators">
+          <img src="./assets/img/seccion_invitados_6_susan-kare.png" alt="Invitada 6 Susan Kare">
+        </div>
+      </section>
+
+      <!-- SECCIÓN TÓPICOS -->
+      <section id="topicos" class="topicos">
+        <div class="container">
+          <h2 class="texto-titulo topicos__titulo">Algunos de nuestros temas</h2>
+          <div class="flex-column topicos__cards">
+            <div class="flex-column topicos__card">
+              <img src="./assets/img/seccion_topicos_1.svg" alt="Tópico 1: Trabajo remoto" class="topicos__img">
+              <h3 class="texto-subtitulo">Trabajo remoto</h3>
+            </div>
+            <div class="flex-column topicos__card">
+              <img src="./assets/img/seccion_topicos_2.svg" alt="Tópico 2: Repensando la programación" class="topicos__img">
+              <h3 class="texto-subtitulo">Repensando la programación</h3>
+            </div>
+            <div class="flex-column topicos__card">
+              <img src="./assets/img/seccion_topicos_3.svg" alt="Tópico 3: Bases del código" class="topicos__img">
+              <h3 class="texto-subtitulo">Bases del código</h3>
+            </div>
+            <div class="flex-column topicos__card">
+              <img src="./assets/img/seccion_topicos_4.svg" alt="Tópico 4: Seguridad informática" class="topicos__img">
+              <h3 class="texto-subtitulo">Seguridad informática</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN NOVEDADES -->
+      <section id="novedades" class="novedades">
+        <div class="container">
+          <h2 class="texto-titulo texto-blanco novedades__titulo">¿Querés las últimas novedades?</h2>
+          <a class="btn texto-btn novedades__btn" href="#">Escuchá los episodios</a>
+        </div>
+      </section>
+      
+    </main>
+
+    <!-- SECCIÓN FOOTER -->
+    <footer class="footer">
+      <div class="container flex-column footer__container">
+        <p class="footer__copyright">&copy; 2021 - Hello blue pale dot</p>
+        <div class="footer__social-icons flex-row">
+          <a href="https://spotify.com" target="_blank" class="footer__social-icon"><i class="fab fa-spotify"></i></a>
+          <a href="https://instagram.com" target="_blank" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://facebook.com" target="_blank" class="footer__social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="https://web.telegram.org/" target="_blank" class="footer__social-icon"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

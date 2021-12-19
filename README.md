@@ -9,6 +9,6 @@
 ```bash
 $ git clone https://github.com/cynthiasunrise/blue-podcast.git
 $ cd blue-podcast
-$ npm install
-$ npm start
 ```
+
+you can run it with Live Server in VSCode
